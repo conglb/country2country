@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin quốc gia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thông tin kinh tế và chi phí sinh hoạt của các quốc gia</h1>
+        <div class="selector">
+            <select id="country1" onchange="loadCountryData('country1')">
+                <option value="">Chọn quốc gia 1</option>
+                <option value="vietnam">Việt Nam</option>
+                <option value="usa">Mỹ</option>
+                <!-- Thêm các quốc gia khác ở đây -->
+            </select>
+
+            <select id="country2" onchange="loadCountryData('country2')">
+                <option value="">Chọn quốc gia 2</option>
+                <option value="vietnam">Việt Nam</option>
+                <option value="usa">Mỹ</option>
+                <!-- Thêm các quốc gia khác ở đây -->
+            </select>
+        </div>
+
+        <div class="content">
+            <div id="country1-info" class="country-info"></div>
+            <div id="country2-info" class="country-info"></div>
+        </div>
+    </div>
+
+    <script src="load_country.js"></script>
+</body>
+</html>
