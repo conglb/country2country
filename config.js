@@ -1,6 +1,7 @@
 // Cấu hình địa chỉ backend.
-// - Chạy trên máy (localhost hoặc mở file trực tiếp): dùng LOCAL_API_URL.
-// - Khi deploy (ví dụ GitHub Pages): điền địa chỉ backend đã được host vào PRODUCTION_API_URL.
+// - Chạy trên máy (localhost hoặc mở file trực tiếp): gọi backend Flask ở LOCAL_API_URL.
+// - Khi deploy lên Netlify: để PRODUCTION_API_URL rỗng để gọi Netlify Function cùng domain
+//   (/countries/:name), hoặc điền địa chỉ một backend khác nếu có.
 (function () {
     const LOCAL_API_URL = 'http://localhost:5002';
     const PRODUCTION_API_URL = '';

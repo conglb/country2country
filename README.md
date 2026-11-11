@@ -28,5 +28,24 @@ Tạo lại database sau khi sửa `sqlite3_countries.sql` (lệnh này xoá và
 sqlite3 countries.db < sqlite3_countries.sql
 ```
 
-Frontend: mở `index.html` trong trình duyệt. Địa chỉ backend được cấu hình trong `config.js`;
-khi deploy (ví dụ GitHub Pages) cần điền địa chỉ backend đã host vào `PRODUCTION_API_URL`.
+Frontend: mở `index.html` trong trình duyệt. Địa chỉ backend được cấu hình trong `config.js`.
+
+##### Deploy lên Netlify
+
+Netlify không chạy được Flask, nên khi deploy API `/countries/:name` được phục vụ bởi
+Netlify Function `netlify/functions/countries.mjs`, đọc dữ liệu từ `countries-data.json`.
+Cấu hình nằm trong `netlify.toml` (chỉ publish các file giao diện, không publish `backend/`).
+
+Sau khi sửa dữ liệu trong `backend/countries.db`, xuất lại JSON cho Function rồi commit:
+
+```bash
+python3 scripts/export_countries.py
+```
+
+Deploy bằng Netlify CLI:
+
+```bash
+npx netlify-cli deploy --build --prod
+```
+
+Hoặc kết nối repo trong giao diện Netlify; mỗi lần push, Netlify tự build theo `netlify.toml`.

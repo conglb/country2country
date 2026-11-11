@@ -8,11 +8,8 @@ function loadCountryData(countryId) {
         return;
     }
 
-    const apiBase = window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL;
-    if (!apiBase) {
-        countryInfoDiv.textContent = 'Chưa cấu hình địa chỉ API (xem config.js).';
-        return;
-    }
+    // Chuỗi rỗng nghĩa là gọi API cùng domain với trang (Netlify Function).
+    const apiBase = window.APP_CONFIG ? window.APP_CONFIG.API_BASE_URL : '';
 
     countryInfoDiv.textContent = 'Đang tải...';
 

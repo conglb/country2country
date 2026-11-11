@@ -1,0 +1,7 @@
+[build]
+  # Chỉ đưa các file giao diện lên Netlify, không publish thư mục backend/.
+  command = "rm -rf public && mkdir -p public && cp index.html style.css config.js load_country.js public/"
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Vietnam",
+    "flag": "https://flagcdn.com/w320/vn.png",
+    "coat_of_arms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_Vietnam.svg",
+    "architecture_image": "https://commons.wikimedia.org/wiki/Special:FilePath/One_Pillar_Pagoda_Hanoi.jpg",
+    "population": 100300000,
+    "gdp": "429.7 billion USD (2023)",
+    "cost_of_living": "Low",
+    "index_rankings": "Human Development Index: 107/193 (2022)"
+  },
+  {
+    "name": "USA",
+    "flag": "https://flagcdn.com/w320/us.png",
+    "coat_of_arms": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater_coat_of_arms_of_the_United_States.svg",
+    "architecture_image": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Capitol_west_side.JPG",
+    "population": 334900000,
+    "gdp": "27.4 trillion USD (2023)",
+    "cost_of_living": "High",
+    "index_rankings": "Human Development Index: 20/193 (2022)"
+  }
+]
